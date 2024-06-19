@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+.desktop-bg{
+    /* background-image: url(./assets/images/backgrounds/bg-b.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-img{
+    background-image: url(./assets/images/nao/nao.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.progress-container {
+    width: 100%;
+    height: 4px;
+    background-color: #f0f0f0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 4px;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    animation: progress-animation 2s infinite linear;
+  }
+
+  @keyframes progress-animation {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+</style>
+<body>
+    <section class="h-screen w-screen bg-black p-4">
+        <div class="h-full w-full bg-white rounded-md relative  flex items-center justify-center">
+            <!-- <div class="text-center" id="message-a">
+                <div class="flex flex-row gap-2">
+                   
+                    <span>
+                        Loading assets...,
+                    </span>
+                </div> 
+                <div>please ensure you have a strong internet since it is a web 3D game. </div>
+                <div class="progress-container mt-4">
+                    <div class="progress-bar"></div>
+                  </div>
+            </div> -->
+            <!-- <div class="text-center hidden" id="message-b">
+                <div>An error occured when loading assets!, please try again. </div>
+                <button type="button">
+                    reload
+                </button>
+            </div> -->
+            <!-- <iframe class="h-full w-full rounded-md" allowfullscreen="false"   sandbox="allow-scripts" frameborder="0" id="game"  src="https://itch.io/embed-upload/8605371?color=333333"> -->
+
+            </iframe>
+            <iframe sandbox="allow-scripts" id="game" frameborder="0" src="https://itch.io/embed-upload/9975978?color=191919" allowfullscreen=""  class="hidden  w-full h-full  rounded-md"><a href="https://naojulius.itch.io/portfolio">Play portfolio on itch.io</a></iframe>
+        </div>
+    </section>
+</body>
+<script>
+//    // Function to check if all iframes are loaded
+//    function allIframesLoaded() {
+//             // Get all iframe elements
+//             var iframes = document.querySelectorAll('iframe');
+//             // Check if all iframes are loaded
+//             for (var i = 0; i < iframes.length; i++) {
+//                 if (!iframes[i].contentWindow || iframes[i].contentWindow.location.href === 'about:blank') {
+//                     return false;
+//                 }
+//             }
+//             return true;
+//         }
+
+//         // Function to be called when all elements are loaded
+//         function allLoaded() {
+//             const game = document.getElementById("game");
+//             const messageA = document.getElementById("message-a");
+//             const messageB = document.getElementById("message-b");
+//             if (allIframesLoaded()) {
+//                 messageA.classList.add("hidden");
+//                 game.classList.remove('hidden');
+//                 console.log('Page and all iframes loaded.');
+//             } else {
+//                 alert("Error");
+//                 messageB.classList.remove("hidden");
+//                 messageA.classList.add("hidden");
+//                 game.classList.add('hidden');
+//                 console.error('Error loading iframes.');
+//             }
+//         }
+
+//         // Check if the main page and all iframes are loaded
+//         function checkAllLoaded() {
+//             if (document.readyState === 'complete') {
+//                 allLoaded();
+//             }
+//         }
+
+//         // Listen for the main page to be loaded
+//         window.onload = checkAllLoaded;
+
+//         // Listen for each iframe to be loaded or have an error
+//         var iframes = document.querySelectorAll('iframe');
+//         for (var i = 0; i < iframes.length; i++) {
+//             iframes[i].addEventListener('load', checkAllLoaded);
+//             iframes[i].addEventListener('error', checkAllLoaded);
+//         }
+</script>
+</html>
