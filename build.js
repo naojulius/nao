@@ -1,1 +1,1 @@
-const build = "https://itch.io/embed-upload/10719433?color=333333"
+const build = "https://itch.io/embed-upload/10795035?color=333333"
